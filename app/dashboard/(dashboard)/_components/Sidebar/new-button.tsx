@@ -24,7 +24,7 @@ const NewButton = () => {
         </div>
       </DialogTrigger>
       <DialogContent>
-        <CreateOrganization routing="/dashboard" />
+        <CreateOrganization afterCreateOrganizationUrl="/dashboard" />
       </DialogContent>
     </Dialog>
   );

@@ -3,11 +3,11 @@ import { useEffect, useRef, useState } from "react";
 
 const HomeBar = () => {
   const [dropDownState, setDropDownState] = useState(false);
-  const dropDownMenuRef = useRef();
+  const dropDownMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const closeDropDown = (e) => {
-      if (!dropDownMenuRef?.current?.contains(e?.target)) {
+    const closeDropDown = (e: MouseEvent) => {
+      if (!dropDownMenuRef?.current?.contains(e?.target as Node)) {
         setDropDownState(false);
       }
     };
