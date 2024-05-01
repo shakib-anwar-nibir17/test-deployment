@@ -8,7 +8,7 @@ import { Id } from "@/convex/_generated/dataModel";
 import { cn } from "@/lib/utils";
 import { useRenameModal } from "@/store/use-rename-modals";
 import { useQuery } from "convex/react";
-import { Menu } from "lucide-react";
+import { Menu, VideoIcon } from "lucide-react";
 import { Poppins } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
@@ -60,6 +60,10 @@ export const Info = ({ boardId }: InfoProps) => {
           {data.title}
         </Button>
       </Hint>
+      <TabSeparator />
+      <Link href="/communication">
+        <VideoIcon />
+      </Link>
       <TabSeparator />
       <Actions id={data._id} title={data.title} side="bottom" sideOffset={10}>
         <div>

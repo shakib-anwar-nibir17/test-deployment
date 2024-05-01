@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const HomeBar = () => {
@@ -32,10 +33,12 @@ const HomeBar = () => {
           Home
           <span className="mt-[2px] h-[3px] w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
         </li>
-        <li className="group flex  cursor-pointer flex-col">
-          Services
-          <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
-        </li>
+        <Link href="/dashboard">
+          <li className="group flex  cursor-pointer flex-col">
+            Dashboard
+            <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
+          </li>
+        </Link>
         <li className="group flex  cursor-pointer flex-col">
           About
           <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
@@ -68,9 +71,11 @@ const HomeBar = () => {
             <li className="cursor-pointer  px-6 py-2 text-white rounded-t-lg hover:bg-sky-600 ">
               Home
             </li>
-            <li className="cursor-pointer  px-6 py-2 text-white hover:bg-sky-600 ">
-              Services
-            </li>
+            <Link href="/dashboard">
+              <li className="cursor-pointer  px-6 py-2 text-white hover:bg-sky-600 ">
+                Dashboard
+              </li>
+            </Link>
             <li className="cursor-pointer  px-6 py-2 text-white hover:bg-sky-600 ">
               About
             </li>
